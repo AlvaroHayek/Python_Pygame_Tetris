@@ -1,5 +1,6 @@
 import pygame, sys
 from grid import Grid # type: ignore
+from blocks import * # type: ignore
 
 pygame.init()
 dark_blue = (44, 44, 127)
@@ -11,12 +12,13 @@ clock = pygame.time.Clock()
 
 game_grid = Grid()
 
-game_grid.grid[0][0] = 1
-game_grid.grid[3][5] = 4
-game_grid.grid[8][6] = 7
+block = LBlock() # type: ignore
 
+# game_grid.grid[0][0] = 1
+# game_grid.grid[3][5] = 4
+# game_grid.grid[8][6] = 7
 
-game_grid.print_grid()
+# game_grid.print_grid()
 
 while True:
     for event in pygame.event.get():
@@ -25,6 +27,8 @@ while True:
             sys.exit()
     #Drawing
     screen.fill(dark_blue)
-    game_grid.draw(screen)        
+    game_grid.draw(screen)
+    block.draw(screen)
+            
     pygame.display.update()
     clock.tick(60)
