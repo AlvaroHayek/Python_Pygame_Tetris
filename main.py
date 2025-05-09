@@ -12,7 +12,7 @@ clock = pygame.time.Clock()
 
 game_grid = Grid()
 
-block = LBlock() # type: ignore
+block = IBlock() # type: ignore
 
 # game_grid.grid[0][0] = 1
 # game_grid.grid[3][5] = 4
