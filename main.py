@@ -1,6 +1,7 @@
 import pygame, sys
-from grid import Grid # type: ignore
-from blocks import * # type: ignore
+from grid import Grid 
+#from blocks import * # type: ignore
+from game import Game 
 
 pygame.init()
 dark_blue = (44, 44, 127)
@@ -10,9 +11,11 @@ pygame.display.set_caption("Python Tetris")
 
 clock = pygame.time.Clock()
 
-game_grid = Grid()
+game = Game()
 
-block = IBlock() # type: ignore
+#game_grid = Grid()
+
+#block = IBlock() # type: ignore
 
 # game_grid.grid[0][0] = 1
 # game_grid.grid[3][5] = 4
@@ -27,8 +30,9 @@ while True:
             sys.exit()
     #Drawing
     screen.fill(dark_blue)
-    game_grid.draw(screen)
-    block.draw(screen)
+    #game_grid.draw(screen)
+    #block.draw(screen)
+    game.draw(screen)
             
     pygame.display.update()
     clock.tick(60)
