@@ -6,9 +6,9 @@ pygame.init()
 dark_blue = (44, 44, 127)
 
 GAME_UPDATE = pygame.USEREVENT
-pygame.time.set_timer(GAME_UPDATE, 20)
+pygame.time.set_timer(GAME_UPDATE, 200)
 
-screen = pygame.display.set_mode((300, 600))
+screen = pygame.display.set_mode((500, 620))
 pygame.display.set_caption("Python Tetris")
 
 clock = pygame.time.Clock()
