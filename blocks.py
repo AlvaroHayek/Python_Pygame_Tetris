@@ -1,5 +1,5 @@
-from block import Block # type: ignore
-from position import Position # type: ignore
+from block import Block 
+from position import Position 
 
 class LBlock(Block):
     def __init__(self):

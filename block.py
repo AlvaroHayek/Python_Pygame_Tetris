@@ -1,6 +1,6 @@
-from colors import Colors  # type: ignore
+from colors import Colors
 import pygame
-from position import Position # type: ignore
+from position import Position
 
 class Block:
     def __init__(self, id):
@@ -34,7 +34,6 @@ class Block:
         if self.rotation_state == 0:
             self.rotation_state = len(self.cells) - 1
     def draw(self, screen):
-        #tiles = self.cells[self.rotation_state]
         tiles = self.get_cell_positions()
         for tile in tiles:
             tile_rect = pygame.Rect(tile.column * self.cell_size + 1, tile.row * self.cell_size + 1,
