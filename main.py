@@ -49,7 +49,11 @@ while True:
     #Drawing
     screen.fill(Colors.dark_blue)
     screen.blit(score_surface, (365, 20, 50, 50))
-    screen.blit(next_surface,(375, 180, 50, 50))
+    screen.blit(next_surface, (375, 180, 50, 50))
+    
+    if game.game_over == True:
+        screen.blit(game_over_surface, (320, 450, 50, 50))
+    
     pygame.draw.rect(screen, Colors.light_blue, score_rect, 0, 10)
     pygame.draw.rect(screen, Colors.light_blue, next_rect, 0, 10)
     game.draw(screen)
