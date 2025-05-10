@@ -20,6 +20,11 @@ class Grid:
         if row >=0 and row < self.num_rows and column >= 0 and column < self.num_cols:
             return True
         return False
+    
+    def is_empty(self, row, column):
+        if self.grid[row][column] == 0:
+            return True
+        return False
             
     #def get_cell_colors(self):
         

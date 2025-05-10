@@ -6,12 +6,17 @@ from game import Game
 pygame.init()
 dark_blue = (44, 44, 127)
 
+GAME_UPDATE = pygame.USEREVENT
+pygame.time.set_timer(GAME_UPDATE, 200)
+
 screen = pygame.display.set_mode((300, 600))
 pygame.display.set_caption("Python Tetris")
 
 clock = pygame.time.Clock()
 
 game = Game()
+
+
 
 #game_grid = Grid()
 
@@ -37,6 +42,8 @@ while True:
                 game.move_down()
             if event.key == pygame.K_UP:
                 game.rotate()
+        if event.type == GAME_UPDATE:
+            game.move_down()
             
             
     #Drawing
